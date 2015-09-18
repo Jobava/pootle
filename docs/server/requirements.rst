@@ -64,6 +64,15 @@ Eg. on a Debian-based system:
 
   $ sudo apt-get install build-essential libxml2-dev libxslt-dev python-dev python-pip
 
+On a Fedora-based system (F21-F22):
+
+.. code-block:: bash
+
+  $ sudo dnf groupinstall 'Development Tools'
+  $ sudo dnf groupinstall 'Development Libraries'
+  $ sudo dnf install libxml2-devel libxslt-devel python-devel python-pip
+
+
 You will also need to access to a working Redis server to provide caching to
 Pootle and for managing asynchronous workers.
 
@@ -73,6 +82,14 @@ To install and run Redis on a Debian-based system:
 
    $ sudo apt-get install redis-server
    $ sudo services redis-server start
+
+To install and run Redis on a Fedora-based system:
+
+.. code-block:: bash
+
+   $ sudo dnf install redis python-redis
+   $ sudo systemctl enable redis.service
+   $ sudo systemctl start redis.service
 
 
 .. _requirements#customize-static:
@@ -87,7 +104,13 @@ On a Debian-based system you can install these with:
 
 .. code-block:: bash
 
-   $ sudo apt-get install nodejs npm
+   $ sudo apt-get install nodejs nodejs-legacy npm
+   
+On a Fedora-based system you can install these with:
+
+.. code-block:: bash
+
+   $ sudo dnf install nodejs npm
 
 On Debian Jessie and perhaps other distributions you also need to link the
 ``nodejs`` command to ``node``:
