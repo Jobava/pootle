@@ -42,6 +42,12 @@ Debian-based system:
 
   $ sudo apt-get install libmysqlclient-dev
 
+On a Fedora-based system:
+
+.. code-block:: bash
+
+  $ sudo dnf install mariadb-devel
+
 
 .. _mysql_installation#install-bindings:
 
