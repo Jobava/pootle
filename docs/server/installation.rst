@@ -54,6 +54,11 @@ Please install ``virtualenv`` from your system packages, e.g. on Debian:
 
   $ sudo apt-get install python-virtualenv
 
+On a Fedora-based system, it's:
+
+.. code-block:: bash
+
+  $ sudo dnf install python-virtualenv
 
 Otherwise you can install ``virtualenv`` using :command:`pip`:
 
